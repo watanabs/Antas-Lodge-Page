@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Rooms | Antas Family Lodge</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<nav id="mainNav">
+  <div class="nav-logo"><div>Antas Family Lodge<span>Itbayat · Batanes · Philippines</span></div></div>
+  <ul class="nav-links">
+    <li><a href="index_1.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="rooms.html">Rooms</a></li>
+    <li><a href="store.html">Store</a></li>
+    <li><a href="explore.html">Explore</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <a href="contact.html" class="nav-cta">Book Now</a>
+  <button class="hamburger" type="button" aria-label="Open menu" aria-expanded="false" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+</nav>
+
+<section id="hero">
+  <div class="hero-img" style="background-image: linear-gradient(to bottom, rgba(26,31,28,0.35) 0%, rgba(43,58,46,0.25) 50%, rgba(26,31,28,0.85) 100%), url('images/Twin bed.avif');"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">Rooms & Rates</div>
+    <h1 class="hero-title">Rest Well in<br><em>Itbayat</em></h1>
+    <p class="hero-sub">Choose a room that fits your pace, from simple overnight stays to more spacious options for families and groups.</p>
+    <div class="hero-btns">
+      <a href="contact.html" class="btn-primary">Book Now</a>
+      <a href="gallery.html" class="btn-ghost">See Gallery</a>
+    </div>
+  </div>
+</section>
+
+<section id="rooms">
+  <div class="rooms-header">
+    <div class="section-eyebrow">Accommodations</div>
+    <h2 class="section-title">Pick the Room That Fits Your <em>Stay</em></h2>
+    <div class="divider"></div>
+    <p class="section-lead">Our rooms are practical, comfortable, and suited for island travel. Tap any card to prefill the inquiry form on the contact page.</p>
+  </div>
+  <div class="rooms-grid">
+    <div class="room-card" onclick="selectRoom('Standard Room — ₱800/night')">
+      <div class="room-img room-img-r1"><img src="images/Standard room.avif" alt="View from Standard Room window" loading="lazy" decoding="async" onerror="this.style.display='none'"/><div class="room-badge">Standard</div></div>
+      <div class="room-body"><h3>Standard Room</h3><p>Cozy single or double occupancy room with natural ventilation and views of Itbayat's rolling fields.</p><div class="room-amenities"><span class="amenity-tag">Fan</span><span class="amenity-tag">Single Bed</span><span class="amenity-tag">Shared Bath</span><span class="amenity-tag">Breakfast</span></div><div class="room-footer"><div class="room-price">₱800 <span>/ night</span></div><a href="contact.html" class="room-btn">Book Room →</a></div></div>
+    </div>
+    <div class="room-card" onclick="selectRoom('Family Room — ₱1,500/night')">
+      <div class="room-img room-img-r2"><img src="images/2 bed room.avif" alt="Ocean view from Family Room" loading="lazy" decoding="async" onerror="this.style.display='none'"/><div class="room-badge">Popular</div></div>
+      <div class="room-body"><h3>AC Fan Room for 2</h3><p>Spacious room for families with multiple beds, perfect for groups exploring the island together.</p><div class="room-amenities"><span class="amenity-tag">2 Double Beds</span><span class="amenity-tag">Private Bath</span><span class="amenity-tag">Fan</span><span class="amenity-tag">Breakfast</span></div><div class="room-footer"><div class="room-price">₱1,500 <span>/ night</span></div><a href="contact.html" class="room-btn">Book Room →</a></div></div>
+    </div>
+    <div class="room-card" onclick="selectRoom('Deluxe Room — ₱2,200/night')">
+      <div class="room-img room-img-r3"><img src="images/Twin bed.avif" alt="Deluxe Room with stone interior" loading="lazy" decoding="async" onerror="this.style.display='none'"/><div class="room-badge">Deluxe</div></div>
+      <div class="room-body"><h3>Twin Bed</h3><p>Our finest room with stone-accented walls, private veranda, and commanding views of the island landscape.</p><div class="room-amenities"><span class="amenity-tag">Queen Bed</span><span class="amenity-tag">Private Bath</span><span class="amenity-tag">Veranda</span><span class="amenity-tag">Breakfast</span></div><div class="room-footer"><div class="room-price">₱2,200 <span>/ night</span></div><a href="contact.html" class="room-btn">Book Room →</a></div></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="rooms-header">
+    <div class="section-eyebrow">Booking Notes</div>
+    <h2 class="section-title">Simple Steps, Clear <em>Communication</em></h2>
+    <div class="divider"></div>
+    <p class="section-lead">If you know your dates, use the contact page to send your inquiry. If you are still deciding, send a message and the family can help you pick the best room.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand"><p class="footer-tagline">"Where the wind meets the stone, and the world slows down."<br>Itbayat · Batanes · Philippines</p></div>
+    <div class="footer-col"><h4>Lodge</h4><ul><li><a href="about.html">About Us</a></li><li><a href="rooms.html">Our Rooms</a></li><li><a href="contact.html">Book a Stay</a></li></ul></div>
+    <div class="footer-col"><h4>Store</h4><ul><li><a href="store.html">Carols Variety Store</a></li><li><a href="store.html">What We Sell</a></li><li><a href="contact.html">Contact Store</a></li></ul></div>
+    <div class="footer-col"><h4>Explore</h4><ul><li><a href="explore.html">Itbayat Island</a></li><li><a href="gallery.html">Photo Gallery</a></li><li><a href="contact.html">Getting Here</a></li><li><a href="admin.html">Admin Dashboard</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><p>© <span id="footerYear">2026</span> Antas Family Lodge & Carols Variety Store · Itbayat, Batanes, Philippines</p><span>Designed with ♥ for Batanes</span></div>
+  <p class="photo-credit">Photographs courtesy of Wikimedia Commons contributors (Creative Commons licenses).</p>
+</footer>
+<script src="js/script.js"></script>
+</body>
+</html>

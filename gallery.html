@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Gallery | Antas Family Lodge</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<nav id="mainNav">
+  <div class="nav-logo"><div>Antas Family Lodge<span>Itbayat · Batanes · Philippines</span></div></div>
+  <ul class="nav-links">
+    <li><a href="index_1.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="rooms.html">Rooms</a></li>
+    <li><a href="store.html">Store</a></li>
+    <li><a href="explore.html">Explore</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <a href="contact.html" class="nav-cta">Book Now</a>
+  <button class="hamburger" type="button" aria-label="Open menu" aria-expanded="false" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+</nav>
+
+<section id="hero">
+  <div class="hero-img" style="background-image: linear-gradient(to bottom, rgba(26,31,28,0.35) 0%, rgba(43,58,46,0.25) 50%, rgba(26,31,28,0.85) 100%), url('images/2nd floor.avif');"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">Moments from the Island</div>
+    <h1 class="hero-title">Batanes in<br><em>Photographs</em></h1>
+    <p class="hero-sub">A visual walk through the wind, stone, sea, and time that shape the island landscape.</p>
+    <div class="hero-btns">
+      <a href="explore.html" class="btn-primary">Explore Itbayat</a>
+      <a href="contact.html" class="btn-ghost">Plan Your Trip</a>
+    </div>
+  </div>
+</section>
+
+<section id="gallery">
+  <div class="gallery-header">
+    <div class="section-eyebrow">Moments from the Island</div>
+    <h2 class="section-title">Batanes in <em>Photographs</em></h2>
+    <div class="divider"></div>
+    <p class="section-lead">A glimpse into the raw beauty that awaits. Every corner of Batanes tells a story of wind, stone, sea, and time.</p>
+  </div>
+  <div class="gallery-grid">
+    <div class="gallery-item tall bg-a"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Vayang_Rolling_Hills%2C_North_Batan%2C_Batanes.jpg/1024px-Vayang_Rolling_Hills%2C_North_Batan%2C_Batanes.jpg" alt="Rolling hills" loading="lazy" decoding="async" onerror="this.style.display='none'"/><div class="gallery-item-caption">Vayang Rolling Hills</div></div>
+    <div class="gallery-item wide bg-b"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Mahatao%2C_Batanes_-_panoramio_%282%29.jpg/1024px-Mahatao%2C_Batanes_-_panoramio_%282%29.jpg" alt="Mahatao village" loading="lazy" decoding="async" onerror="this.style.display='none'"/><div class="gallery-item-caption">Mahatao Village</div></div>
+    <div class="gallery-item bg-c"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Batanes_Stone_House.jpg/800px-Batanes_Stone_House.jpg" alt="Stone house" loading="lazy" decoding="async" onerror="this.style.display='none'"/><div class="gallery-item-caption">Ivatan Stone House</div></div>
+    <div class="gallery-item bg-b"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Basco_Lighthouse%2C_Batanes.jpg/800px-Basco_Lighthouse%2C_Batanes.jpg" alt="Basco Lighthouse" loading="lazy" decoding="async" onerror="this.style.display='none'"/><div class="gallery-item-caption">Basco Lighthouse</div></div>
+    <div class="gallery-item wide bg-d"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Sunset_in_Itbayat%2C_Batanes.jpg/1280px-Sunset_in_Itbayat%2C_Batanes.jpg" alt="Sunset in Itbayat" loading="lazy" decoding="async" onerror="this.style.display='none'"/><div class="gallery-item-caption">Sunset in Itbayat</div></div>
+    <div class="gallery-item bg-a"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Vayang_Rolling_Hills%2C_North_Batan%2C_Batanes.jpg/800px-Vayang_Rolling_Hills%2C_North_Batan%2C_Batanes.jpg" alt="Batanes landscape" loading="lazy" decoding="async" onerror="this.style.display='none'"/><div class="gallery-item-caption">Green Meadows</div></div>
+    <div class="gallery-item bg-c"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Batanes_Stone_House.jpg/1024px-Batanes_Stone_House.jpg" alt="Traditional houses" loading="lazy" decoding="async" onerror="this.style.display='none'"/><div class="gallery-item-caption">Traditional Architecture</div></div>
+  </div>
+</section>
+
+<section>
+  <div class="rooms-header">
+    <div class="section-eyebrow">Photo Credit</div>
+    <h2 class="section-title">Public Views of <em>Batanes</em></h2>
+    <div class="divider"></div>
+    <p class="section-lead">These photographs are placeholders from public sources. Replace them with original lodge and island photography when ready.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand"><p class="footer-tagline">"Where the wind meets the stone, and the world slows down."<br>Itbayat · Batanes · Philippines</p></div>
+    <div class="footer-col"><h4>Lodge</h4><ul><li><a href="about.html">About Us</a></li><li><a href="rooms.html">Our Rooms</a></li><li><a href="contact.html">Book a Stay</a></li></ul></div>
+    <div class="footer-col"><h4>Store</h4><ul><li><a href="store.html">Carols Variety Store</a></li><li><a href="store.html">What We Sell</a></li><li><a href="contact.html">Contact Store</a></li></ul></div>
+    <div class="footer-col"><h4>Explore</h4><ul><li><a href="explore.html">Itbayat Island</a></li><li><a href="gallery.html">Photo Gallery</a></li><li><a href="contact.html">Getting Here</a></li><li><a href="admin.html">Admin Dashboard</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><p>© <span id="footerYear">2026</span> Antas Family Lodge & Carols Variety Store · Itbayat, Batanes, Philippines</p><span>Designed with ♥ for Batanes</span></div>
+  <p class="photo-credit">Photographs courtesy of Wikimedia Commons contributors (Creative Commons licenses).</p>
+</footer>
+<script src="js/script.js"></script>
+</body>
+</html>

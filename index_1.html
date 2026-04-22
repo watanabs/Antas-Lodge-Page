@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Antas Family Lodge & Carols Variety Store | Itbayat, Batanes</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- ── NAVIGATION ── -->
+<nav id="mainNav">
+  <div class="nav-logo">
+    <div>
+      Antas Family Lodge
+      <span>Itbayat · Batanes · Philippines</span>
+    </div>
+  </div>
+  <ul class="nav-links">
+    <li><a href="about.html">About</a></li>
+    <li><a href="rooms.html">Rooms</a></li>
+    <li><a href="store.html">Store</a></li>
+    <li><a href="explore.html">Explore</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <a href="contact.html" class="nav-cta">Book Now</a>
+  <button class="hamburger" type="button" aria-label="Open menu" aria-expanded="false" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- ── HERO ── -->
+<section id="hero">
+  <div class="hero-img"></div>
+  <div class="hero-dots" id="heroDots"></div>
+
+  <div class="hero-content">
+    <div class="hero-eyebrow">Itbayat Island, Batanes</div>
+    <h1 class="hero-title">Where the Wind<br>Meets the <em>Stone</em></h1>
+    <p class="hero-sub">Experience the raw, untouched beauty of the Philippines' northernmost frontier. A family home away from home, perched on the edge of the world.</p>
+    <div class="hero-btns">
+      <a href="rooms.html" class="btn-primary">View Rooms</a>
+      <a href="explore.html" class="btn-ghost">Explore Itbayat</a>
+    </div>
+  </div>
+
+  <div class="hero-scroll">
+    <div class="scroll-line"></div>
+    <span>Scroll</span>
+  </div>
+</section>
+
+<!-- ── ABOUT ── -->
+<section id="about">
+  <div class="about-visual">
+    <div class="about-img-wrap about-img-main">
+      <img src="images/front lodge.avif"
+           alt="Traditional Ivatan stone house in Batanes"
+          loading="lazy"
+          decoding="async"
+           onerror="this.style.display='none'"/>
+    </div>
+    <div class="about-img-wrap about-img-accent">
+      <img src="images/2nd floor.avif"
+           alt="Sunset in Itbayat, Batanes"
+          loading="lazy"
+          decoding="async"
+           onerror="this.style.display='none'"/>
+    </div>
+    <div class="about-badge">
+      <strong>Antas</strong>
+      <span>Family Lodge</span>
+    </div>
+  </div>
+
+  <div class="about-text">
+    <div class="section-eyebrow">Our Story</div>
+    <h2 class="section-title">A Family <em>Haven</em><br>at the Edge of the World</h2>
+    <div class="divider"></div>
+    <p class="section-lead">Antas Family Lodge is a warm, welcoming rest house nestled in Itbayat — the remotest inhabited island of the Philippines. We offer genuine Ivatan hospitality to travellers seeking the extraordinary beauty of Batanes.</p>
+    <div class="about-features">
+      <div class="feat-item">
+        <div class="feat-icon">🏡</div>
+        <div class="feat-text">
+          <strong>Ivatan Architecture</strong>
+          <p>Built in the tradition of Batanes homes, standing strong against Pacific winds.</p>
+        </div>
+      </div>
+      <div class="feat-item">
+        <div class="feat-icon">🌊</div>
+        <div class="feat-text">
+          <strong>Island Serenity</strong>
+          <p>Surrounded by grasslands, dramatic cliffs, and the deep Pacific Ocean.</p>
+        </div>
+      </div>
+      <div class="feat-item">
+        <div class="feat-icon">🍃</div>
+        <div class="feat-text">
+          <strong>Local Cuisine</strong>
+          <p>Enjoy traditional Ivatan meals made with fresh local ingredients.</p>
+        </div>
+      </div>
+      <div class="feat-item">
+        <div class="feat-icon">⭐</div>
+        <div class="feat-text">
+          <strong>Personal Service</strong>
+          <p>Our family attends to every guest with genuine care and local wisdom.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── ROOMS ── -->
+<section id="rooms">
+  <div class="rooms-header">
+    <div class="section-eyebrow">Accommodations</div>
+    <h2 class="section-title">Rest Well in <em>Itbayat</em></h2>
+    <div class="divider"></div>
+    <p class="section-lead">Simple, clean, and comfortable rooms designed for weary travellers who've come to experience the wildness of Batanes.</p>
+  </div>
+
+  <div class="rooms-grid">
+    <div class="room-card" onclick="selectRoom('Standard Room — ₱800/night')">
+      <div class="room-img room-img-r1">
+        <img src="images/Standard room.avif"
+             alt="View from Standard Room window"
+             loading="lazy"
+             decoding="async"
+             onerror="this.style.display='none'"/>
+        <div class="room-badge">Standard</div>
+      </div>
+      <div class="room-body">
+        <h3>Standard Room</h3>
+        <p>Cozy single or double occupancy room with natural ventilation and views of Itbayat's rolling fields.</p>
+        <div class="room-amenities">
+          <span class="amenity-tag">Fan</span>
+          <span class="amenity-tag">Single Bed</span>
+          <span class="amenity-tag">Shared Bath</span>
+          <span class="amenity-tag">Breakfast</span>
+        </div>
+        <div class="room-footer">
+          <div class="room-price">₱800 <span>/ night</span></div>
+          <a href="#contact" class="room-btn">Book Room →</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="room-card" onclick="selectRoom('Family Room — ₱1,500/night')">
+      <div class="room-img room-img-r2">
+        <img src="images/2 bed room.avif"
+             alt="Ocean view from Family Room"
+             loading="lazy"
+             decoding="async"
+             onerror="this.style.display='none'"/>
+        <div class="room-badge">Popular</div>
+      </div>
+      <div class="room-body">
+        <h3>AC Fan Room for 2</h3>
+        <p>Spacious room for families with multiple beds, perfect for groups exploring the island together.</p>
+        <div class="room-amenities">
+          <span class="amenity-tag">2 Double Beds</span>
+          <span class="amenity-tag">Private Bath</span>
+          <span class="amenity-tag">Fan</span>
+          <span class="amenity-tag">Breakfast</span>
+        </div>
+        <div class="room-footer">
+          <div class="room-price">₱1,500 <span>/ night</span></div>
+          <a href="#contact" class="room-btn">Book Room →</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="room-card" onclick="selectRoom('Deluxe Room — ₱2,200/night')">
+      <div class="room-img room-img-r3">
+        <img src="images/Twin bed.avif"
+             alt="Deluxe Room with stone interior"
+             loading="lazy"
+             decoding="async"
+             onerror="this.style.display='none'"/>
+        <div class="room-badge">Deluxe</div>
+      </div>
+      <div class="room-body">
+        <h3>Twin Bed </h3>
+        <p>Our finest room with stone-accented walls, private veranda, and commanding views of the island landscape.</p>
+        <div class="room-amenities">
+          <span class="amenity-tag">Queen Bed</span>
+          <span class="amenity-tag">Private Bath</span>
+          <span class="amenity-tag">Veranda</span>
+          <span class="amenity-tag">Breakfast</span>
+        </div>
+        <div class="room-footer">
+          <div class="room-price">₱2,200 <span>/ night</span></div>
+          <a href="#contact" class="room-btn">Book Room →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── STORE ── -->
+<section id="store">
+  <div class="store-text">
+    <div class="section-eyebrow">Our Shop</div>
+    <h2 class="section-title">Carols<br><em>Variety Store</em></h2>
+    <div class="divider"></div>
+    <p class="section-lead">Right next to the lodge, Carols Variety Store is your one-stop shop on the island — stocked with daily essentials, local products, and everything you need for your Itbayat adventure.</p>
+
+    <div class="store-categories">
+      <div class="store-cat">
+        <div class="store-cat-icon">🛒</div>
+        <h4>Grocery & Pantry</h4>
+        <p>Rice, canned goods, snacks, condiments, and daily staples.</p>
+      </div>
+      <div class="store-cat">
+        <div class="store-cat-icon">🧴</div>
+        <h4>Personal Care</h4>
+        <p>Toiletries, hygiene products, and basic medicines.</p>
+      </div>
+      <div class="store-cat">
+        <div class="store-cat-icon">🐟</div>
+        <h4>Local Products</h4>
+        <p>Dried fish, coconut vinegar, and Ivatan delicacies to take home.</p>
+      </div>
+      <div class="store-cat">
+        <div class="store-cat-icon">🔦</div>
+        <h4>Hardware & Tools</h4>
+        <p>Batteries, rope, candles, and basic supplies for island life.</p>
+      </div>
+      <div class="store-cat">
+        <div class="store-cat-icon">🥤</div>
+        <h4>Drinks & Snacks</h4>
+        <p>Cold drinks, local juices, biscuits, and light refreshments.</p>
+      </div>
+      <div class="store-cat">
+        <div class="store-cat-icon">🎁</div>
+        <h4>Souvenirs</h4>
+        <p>Local crafts and keepsakes to remember Itbayat by.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="store-visual">
+    <div class="store-image-frame">
+      <img src="images/Store.avif"
+           alt="Traditional Ivatan village"
+           loading="lazy"
+           decoding="async"
+           onerror="this.style.display='none'"/>
+      <div class="store-overlay">
+        <h4>Everything You Need, Island-Style</h4>
+        <p>"Serving the Itbayat community with care, right beside the lodge."</p>
+      </div>
+    </div>
+    <div class="store-sign">
+      <p class="store-sign-top">Welcome to</p>
+      <h3 class="store-sign-name">Carols Variety Store</h3>
+      <p class="store-sign-hours">OPEN DAILY · 7AM – 8PM</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── EXPLORE ── -->
+<section id="explore">
+  <div class="explore-header">
+    <div class="section-eyebrow">Discover the Island</div>
+    <h2 class="section-title">Explore <em>Itbayat</em></h2>
+    <div class="divider"></div>
+    <p class="section-lead">Itbayat is the northernmost and most isolated municipality of the Philippines. Its ancient volcanic landscape, dramatic cliffs, and serene grasslands are unlike anywhere else on earth.</p>
+  </div>
+
+  <div class="explore-grid">
+    <div class="explore-card bg-1">
+       <img src="images/vayang rolling hills.png"
+           alt="Rolling grasslands of Batanes"
+         loading="lazy"
+         decoding="async"
+           onerror="this.style.display='none'"/>
+      <div class="explore-overlay"></div>
+      <div class="explore-content">
+        <h3>Rolling Grasslands</h3>
+        <p>Trek across Itbayat's endless green hills that stretch toward the Pacific horizon — a landscape unchanged for centuries.</p>
+      </div>
+    </div>
+
+    <div class="explore-card bg-2">
+      <img src="images/rapang cliff.jpg"
+           alt="Basco Lighthouse in Batanes"
+         loading="lazy"
+         decoding="async"
+           onerror="this.style.display='none'"/>
+      <div class="explore-overlay"></div>
+      <div class="explore-content">
+        <h3>Dramatic Cliffs</h3>
+        <p>Stand at towering cliffs where the island plunges into the deep Pacific.</p>
+      </div>
+    </div>
+
+    <div class="explore-card bg-3">
+      <img src="images/house of dakay.png"
+           alt="Traditional Ivatan stone houses"
+         loading="lazy"
+         decoding="async"
+           onerror="this.style.display='none'"/>
+      <div class="explore-overlay"></div>
+      <div class="explore-content">
+        <h3>Ivatan Stone Houses</h3>
+        <p>Historic limestone and cogon-thatched homes built to withstand typhoons.</p>
+      </div>
+    </div>
+
+    <div class="explore-card bg-4">
+      <img src="images/villlage.jpg"
+           alt="Batanes coastal village"
+         loading="lazy"
+         decoding="async"
+           onerror="this.style.display='none'"/>
+      <div class="explore-overlay"></div>
+      <div class="explore-content">
+        <h3>Villages</h3>
+        <p>Walk quiet stone-paved paths through centuries-old Ivatan communities.</p>
+      </div>
+    </div>
+
+    <div class="explore-card bg-5">
+      <img src="images/Basco sunset.webp"
+           alt="Sunset over Itbayat"
+         loading="lazy"
+         decoding="async"
+           onerror="this.style.display='none'"/>
+      <div class="explore-overlay"></div>
+      <div class="explore-content">
+        <h3>Breathtaking Sunsets</h3>
+        <p>Watch the sun sink below the Pacific, painting the sky in amber and gold.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── GALLERY ── -->
+<section id="gallery">
+  <div class="gallery-header">
+    <div class="section-eyebrow">Moments from the Island</div>
+    <h2 class="section-title">Batanes in <em>Photographs</em></h2>
+    <div class="divider"></div>
+    <p class="section-lead">A glimpse into the raw beauty that awaits. Every corner of Batanes tells a story of wind, stone, sea, and time.</p>
+  </div>
+
+  <div class="gallery-grid">
+    <div class="gallery-item tall bg-a">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Vayang_Rolling_Hills%2C_North_Batan%2C_Batanes.jpg/1024px-Vayang_Rolling_Hills%2C_North_Batan%2C_Batanes.jpg" alt="Rolling hills" loading="lazy" decoding="async" onerror="this.style.display='none'"/>
+      <div class="gallery-item-caption">Vayang Rolling Hills</div>
+    </div>
+    <div class="gallery-item wide bg-b">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Mahatao%2C_Batanes_-_panoramio_%282%29.jpg/1024px-Mahatao%2C_Batanes_-_panoramio_%282%29.jpg" alt="Mahatao village" loading="lazy" decoding="async" onerror="this.style.display='none'"/>
+      <div class="gallery-item-caption">Mahatao Village</div>
+    </div>
+    <div class="gallery-item bg-c">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Batanes_Stone_House.jpg/800px-Batanes_Stone_House.jpg" alt="Stone house" loading="lazy" decoding="async" onerror="this.style.display='none'"/>
+      <div class="gallery-item-caption">Ivatan Stone House</div>
+    </div>
+    <div class="gallery-item bg-b">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Basco_Lighthouse%2C_Batanes.jpg/800px-Basco_Lighthouse%2C_Batanes.jpg" alt="Basco Lighthouse" loading="lazy" decoding="async" onerror="this.style.display='none'"/>
+      <div class="gallery-item-caption">Basco Lighthouse</div>
+    </div>
+    <div class="gallery-item wide bg-d">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Sunset_in_Itbayat%2C_Batanes.jpg/1280px-Sunset_in_Itbayat%2C_Batanes.jpg" alt="Sunset in Itbayat" loading="lazy" decoding="async" onerror="this.style.display='none'"/>
+      <div class="gallery-item-caption">Sunset in Itbayat</div>
+    </div>
+    <div class="gallery-item bg-a">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Vayang_Rolling_Hills%2C_North_Batan%2C_Batanes.jpg/800px-Vayang_Rolling_Hills%2C_North_Batan%2C_Batanes.jpg" alt="Batanes landscape" loading="lazy" decoding="async" onerror="this.style.display='none'"/>
+      <div class="gallery-item-caption">Green Meadows</div>
+    </div>
+    <div class="gallery-item bg-c">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Batanes_Stone_House.jpg/1024px-Batanes_Stone_House.jpg" alt="Traditional houses" loading="lazy" decoding="async" onerror="this.style.display='none'"/>
+      <div class="gallery-item-caption">Traditional Architecture</div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CONTACT ── -->
+<section id="contact">
+  <div class="contact-info">
+    <div class="section-eyebrow">Get in Touch</div>
+    <h2 class="section-title">Book Your Stay at<br><em>Antas Lodge</em></h2>
+    <div class="divider"></div>
+    <p class="section-lead">Ready to experience the last frontier? Reach out to reserve your room or inquire about availability. We'd love to have you as our guest in Itbayat.</p>
+
+    <div class="contact-items">
+      <div class="contact-item">
+        <div class="contact-icon">📍</div>
+        <div class="contact-item-text">
+          <strong>Location</strong>
+          <p>Antas Family Lodge<br>Itbayat, Batanes, Philippines</p>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-icon">📞</div>
+        <div class="contact-item-text">
+          <strong>Phone / Mobile</strong>
+          <p>Please inquire via the contact form or our Facebook page for the latest contact number.</p>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-icon">✈️</div>
+        <div class="contact-item-text">
+          <strong>How to Get Here</strong>
+          <p>Fly to Basco (Batanes), then take a boat or light aircraft to Itbayat Island. Schedule varies with weather.</p>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-icon">🕐</div>
+        <div class="contact-item-text">
+          <strong>Check-in / Check-out</strong>
+          <p>Check-in: 12:00 PM · Check-out: 11:00 AM<br>Early/late arrangements welcome.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="contact-form">
+    <h3 class="form-title">Send Us a Message</h3>
+    <p class="form-sub">We'll respond as soon as we have signal — island life is peaceful that way.</p>
+
+    <form id="inquiryForm">
+
+    <div class="form-row">
+      <div class="form-group">
+        <label>First Name</label>
+        <input type="text" placeholder="Juan" id="fname" autocomplete="given-name" required/>
+      </div>
+      <div class="form-group">
+        <label>Last Name</label>
+        <input type="text" placeholder="dela Cruz" id="lname" autocomplete="family-name"/>
+      </div>
+    </div>
+    <div class="form-group">
+      <label>Email Address</label>
+      <input type="email" placeholder="you@example.com" id="email" autocomplete="email" required/>
+    </div>
+    <div class="form-group">
+      <label>Phone Number</label>
+      <input type="tel" placeholder="+63 912 345 6789" id="phone" autocomplete="tel"/>
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label>Check-in Date</label>
+        <input type="date" id="checkin"/>
+      </div>
+      <div class="form-group">
+        <label>Check-out Date</label>
+        <input type="date" id="checkout"/>
+      </div>
+    </div>
+    <div class="form-group">
+      <label>Room Type</label>
+      <select id="roomtype" required>
+        <option value="">Select a room type</option>
+        <option>Standard Room — ₱800/night</option>
+        <option>Family Room — ₱1,500/night</option>
+        <option>Deluxe Room — ₱2,200/night</option>
+        <option>General Inquiry</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label>Message</label>
+      <textarea placeholder="Tell us about your trip, number of guests, or any questions…" id="msg" rows="5"></textarea>
+    </div>
+    <button class="form-submit" type="submit">Send Inquiry →</button>
+    </form>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <p class="footer-tagline">"Where the wind meets the stone, and the world slows down."<br>Itbayat · Batanes · Philippines</p>
+    </div>
+    <div class="footer-col">
+      <h4>Lodge</h4>
+      <ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="rooms.html">Our Rooms</a></li>
+        <li><a href="contact.html">Book a Stay</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Store</h4>
+      <ul>
+        <li><a href="store.html">Carols Variety Store</a></li>
+        <li><a href="store.html">What We Sell</a></li>
+        <li><a href="contact.html">Contact Store</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Explore</h4>
+      <ul>
+        <li><a href="explore.html">Itbayat Island</a></li>
+        <li><a href="gallery.html">Photo Gallery</a></li>
+        <li><a href="contact.html">Getting Here</a></li>
+        <li><a href="admin.html">Admin Dashboard</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© <span id="footerYear">2026</span> Antas Family Lodge & Carols Variety Store · Itbayat, Batanes, Philippines</p>
+    <span>Designed with ♥ for Batanes</span>
+  </div>
+  <p class="photo-credit">Photographs courtesy of Wikimedia Commons contributors (Creative Commons licenses).<br>For best results, replace these with your own photos of Antas Lodge, Carols Store, and Itbayat.</p>
+</footer>
+
+<!-- TOAST -->
+<div class="toast" id="toast"></div>
+
+<script src="js/script.js"></script>
+</body>
+</html>

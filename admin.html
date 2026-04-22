@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Admin Dashboard | Antas Family Lodge</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <p class="eyebrow">Admin Console</p>
+      <h1>Antas Family Lodge and Carols Variety Store</h1>
+    </div>
+    <a class="back-link" href="index_1.html">Back to Website</a>
+  </header>
+
+  <nav class="quick-nav" aria-label="Admin Sections">
+    <a class="quick-link" href="#overviewSection">Overview</a>
+    <a class="quick-link" href="#bookingListSection">Booking List</a>
+    <a class="quick-link" href="#directBookingSection">Add Booking</a>
+    <a class="quick-link" href="#availabilitySection">Availability</a>
+  </nav>
+
+  <main class="layout">
+    <section class="panel auth-panel" id="overviewSection">
+      <h2>Admin Access</h2>
+      <p class="muted">If your backend uses ADMIN_KEY, enter it below. Leave blank if not configured.</p>
+      <div class="auth-row">
+        <input id="adminKey" type="password" placeholder="Optional admin key" autocomplete="off" />
+        <button id="saveKeyBtn" type="button">Use Key</button>
+      </div>
+      <p id="authStatus" class="status-text"></p>
+    </section>
+
+    <section class="stats-grid">
+      <article class="panel stat-card">
+        <h3>Total</h3>
+        <p id="statTotal">0</p>
+      </article>
+      <article class="panel stat-card">
+        <h3>New</h3>
+        <p id="statNew">0</p>
+      </article>
+      <article class="panel stat-card">
+        <h3>Contacted</h3>
+        <p id="statContacted">0</p>
+      </article>
+      <article class="panel stat-card">
+        <h3>Confirmed</h3>
+        <p id="statConfirmed">0</p>
+      </article>
+      <article class="panel stat-card">
+        <h3>Closed</h3>
+        <p id="statClosed">0</p>
+      </article>
+    </section>
+
+    <section class="panel controls-panel" id="bookingListSection">
+      <h2>Booking List</h2>
+      <div class="controls-row">
+        <div>
+          <label for="statusFilter">Filter by status</label>
+          <select id="statusFilter">
+            <option value="all">All</option>
+            <option value="new">New</option>
+            <option value="contacted">Contacted</option>
+            <option value="confirmed">Confirmed</option>
+            <option value="closed">Closed</option>
+          </select>
+        </div>
+        <div>
+          <label for="searchFilter">Search guest/email/phone/room</label>
+          <input id="searchFilter" type="text" placeholder="e.g. Juan, gmail, +63, Standard" />
+        </div>
+        <button id="clearFiltersBtn" type="button">Clear</button>
+        <button id="exportBtn" type="button">Export CSV</button>
+        <button id="refreshBtn" type="button">Refresh</button>
+      </div>
+      <p id="tableStatus" class="status-text"></p>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Guest</th>
+              <th>Stay</th>
+              <th>Booking Summary</th>
+              <th>Status</th>
+              <th>Submitted</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="inquiryRows">
+            <tr>
+              <td colspan="6">No inquiries yet.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="panel booking-panel" id="directBookingSection">
+      <h2>Add Direct Booking</h2>
+      <p class="muted">Create a confirmed booking from walk-in guests, phone calls, or Facebook inquiries.</p>
+      <form id="directBookingForm">
+        <div class="form-grid">
+          <label>
+            First Name
+            <input id="bFirstName" required type="text" placeholder="Juan" />
+          </label>
+          <label>
+            Last Name
+            <input id="bLastName" type="text" placeholder="Dela Cruz" />
+          </label>
+          <label>
+            Email
+            <input id="bEmail" required type="email" placeholder="guest@email.com" />
+          </label>
+          <label>
+            Phone Number
+            <input id="bPhone" type="tel" placeholder="+63 912 345 6789" />
+          </label>
+          <label>
+            Room Type
+            <select id="bRoomType">
+              <option>Standard Room — ₱800/night</option>
+              <option>Family Room — ₱1,500/night</option>
+              <option>Deluxe Room — ₱2,200/night</option>
+            </select>
+          </label>
+          <label>
+            Room Number
+            <input id="bRoomNumber" required type="text" placeholder="e.g. 101 or A-2" />
+          </label>
+          <label>
+            Check-in
+            <input id="bCheckIn" type="date" />
+          </label>
+          <label>
+            Check-out
+            <input id="bCheckOut" type="date" />
+          </label>
+        </div>
+        <label>
+          Note / Request
+          <textarea id="bMessage" rows="3" placeholder="Airport pickup, meal preference, early check-in, etc."></textarea>
+        </label>
+        <div class="booking-actions">
+          <button id="addBookingBtn" type="submit">Add Booking</button>
+          <p id="bookingFormStatus" class="status-text"></p>
+        </div>
+      </form>
+    </section>
+
+    <section class="panel availability-panel" id="availabilitySection">
+      <h2>Room Availability Calendar</h2>
+      <p class="muted">Check monthly room occupancy to avoid overlapping bookings before assigning a room.</p>
+      <div class="availability-controls">
+        <label>
+          Room Number
+          <input id="calendarRoom" type="text" placeholder="e.g. 101" />
+        </label>
+        <label>
+          Month
+          <input id="calendarMonth" type="month" />
+        </label>
+        <button id="calendarCheckBtn" type="button">Load Calendar</button>
+      </div>
+      <p id="calendarStatus" class="status-text"></p>
+      <div id="calendarGrid" class="calendar-grid-wrap"></div>
+      <div id="calendarConflicts" class="calendar-conflicts"></div>
+    </section>
+  </main>
+
+  <script src="js/admin.js"></script>
+</body>
+</html>

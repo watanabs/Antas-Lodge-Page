@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Contact | Antas Family Lodge</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<nav id="mainNav">
+  <div class="nav-logo"><div>Antas Family Lodge<span>Itbayat · Batanes · Philippines</span></div></div>
+  <ul class="nav-links">
+    <li><a href="index_1.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="rooms.html">Rooms</a></li>
+    <li><a href="store.html">Store</a></li>
+    <li><a href="explore.html">Explore</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <a href="contact.html" class="nav-cta">Book Now</a>
+  <button class="hamburger" type="button" aria-label="Open menu" aria-expanded="false" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+</nav>
+
+<section id="hero">
+  <div class="hero-img" style="background-image: linear-gradient(to bottom, rgba(26,31,28,0.35) 0%, rgba(43,58,46,0.25) 50%, rgba(26,31,28,0.85) 100%), url('images/front lodge.avif');"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">Contact & Booking</div>
+    <h1 class="hero-title">Plan Your Stay<br><em>With Us</em></h1>
+    <p class="hero-sub">Send an inquiry, ask about room availability, or contact the store and lodge team with your travel details.</p>
+    <div class="hero-btns">
+      <a href="#inquiryForm" class="btn-primary">Send Inquiry</a>
+      <a href="rooms.html" class="btn-ghost">View Rooms</a>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="contact-info">
+    <div class="section-eyebrow">Get in Touch</div>
+    <h2 class="section-title">Book Your Stay at<br><em>Antas Lodge</em></h2>
+    <div class="divider"></div>
+    <p class="section-lead">Ready to experience the last frontier? Reach out to reserve your room or inquire about availability. We'd love to have you as our guest in Itbayat.</p>
+    <div class="contact-items">
+      <div class="contact-item"><div class="contact-icon">📍</div><div class="contact-item-text"><strong>Location</strong><p>Antas Family Lodge<br>Itbayat, Batanes, Philippines</p></div></div>
+      <div class="contact-item"><div class="contact-icon">📞</div><div class="contact-item-text"><strong>Phone / Mobile</strong><p>Please inquire via the contact form or our Facebook page for the latest contact number.</p></div></div>
+      <div class="contact-item"><div class="contact-icon">✈️</div><div class="contact-item-text"><strong>How to Get Here</strong><p>Fly to Basco (Batanes), then take a boat or light aircraft to Itbayat Island. Schedule varies with weather.</p></div></div>
+      <div class="contact-item"><div class="contact-icon">🕐</div><div class="contact-item-text"><strong>Check-in / Check-out</strong><p>Check-in: 12:00 PM · Check-out: 11:00 AM<br>Early/late arrangements welcome.</p></div></div>
+    </div>
+  </div>
+
+  <div class="contact-form">
+    <h3 class="form-title">Send Us a Message</h3>
+    <p class="form-sub">We'll respond as soon as we have signal — island life is peaceful that way.</p>
+    <form id="inquiryForm">
+      <div class="form-row"><div class="form-group"><label>First Name</label><input type="text" placeholder="Juan" id="fname" autocomplete="given-name" required/></div><div class="form-group"><label>Last Name</label><input type="text" placeholder="dela Cruz" id="lname" autocomplete="family-name"/></div></div>
+      <div class="form-group"><label>Email Address</label><input type="email" placeholder="you@example.com" id="email" autocomplete="email" required/></div>
+      <div class="form-group"><label>Phone Number</label><input type="tel" placeholder="+63 912 345 6789" id="phone" autocomplete="tel"/></div>
+      <div class="form-row"><div class="form-group"><label>Check-in Date</label><input type="date" id="checkin"/></div><div class="form-group"><label>Check-out Date</label><input type="date" id="checkout"/></div></div>
+      <div class="form-group"><label>Room Type</label><select id="roomtype" required><option value="">Select a room type</option><option>Standard Room — ₱800/night</option><option>Family Room — ₱1,500/night</option><option>Deluxe Room — ₱2,200/night</option><option>General Inquiry</option></select></div>
+      <div class="form-group"><label>Message</label><textarea placeholder="Tell us about your trip, number of guests, or any questions…" id="msg" rows="5"></textarea></div>
+      <button class="form-submit" type="submit">Send Inquiry →</button>
+    </form>
+  </div>
+</section>
+
+<section>
+  <div class="rooms-header">
+    <div class="section-eyebrow">Helpful Note</div>
+    <h2 class="section-title">The Fastest Way to <em>Reach Us</em></h2>
+    <div class="divider"></div>
+    <p class="section-lead">Use the form for booking requests and general questions. If you already know your room and dates, include them so the team can respond faster.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand"><p class="footer-tagline">"Where the wind meets the stone, and the world slows down."<br>Itbayat · Batanes · Philippines</p></div>
+    <div class="footer-col"><h4>Lodge</h4><ul><li><a href="about.html">About Us</a></li><li><a href="rooms.html">Our Rooms</a></li><li><a href="contact.html">Book a Stay</a></li></ul></div>
+    <div class="footer-col"><h4>Store</h4><ul><li><a href="store.html">Carols Variety Store</a></li><li><a href="store.html">What We Sell</a></li><li><a href="contact.html">Contact Store</a></li></ul></div>
+    <div class="footer-col"><h4>Explore</h4><ul><li><a href="explore.html">Itbayat Island</a></li><li><a href="gallery.html">Photo Gallery</a></li><li><a href="contact.html">Getting Here</a></li><li><a href="admin.html">Admin Dashboard</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><p>© <span id="footerYear">2026</span> Antas Family Lodge & Carols Variety Store · Itbayat, Batanes, Philippines</p><span>Designed with ♥ for Batanes</span></div>
+  <p class="photo-credit">Photographs courtesy of Wikimedia Commons contributors (Creative Commons licenses).</p>
+</footer>
+<div class="toast" id="toast"></div>
+<script src="js/script.js"></script>
+</body>
+</html>
