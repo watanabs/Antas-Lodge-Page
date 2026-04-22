@@ -1,0 +1,514 @@
+:root {
+  --ink: #1e2a23;
+  --sand: #e8ddc4;
+  --ridge: #8d623f;
+  --leaf: #46613d;
+  --mist: #f3f6f1;
+  --paper: #fffefb;
+  --danger: #a93734;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Manrope', sans-serif;
+  color: var(--ink);
+  background:
+    radial-gradient(circle at 10% 10%, rgba(141, 98, 63, 0.14), transparent 30%),
+    radial-gradient(circle at 90% 0%, rgba(70, 97, 61, 0.12), transparent 28%),
+    linear-gradient(180deg, #f6f2e8 0%, #ebf2ea 100%);
+  min-height: 100vh;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: center;
+  padding: 1.2rem 1.5rem;
+  border-bottom: 1px solid rgba(30, 42, 35, 0.12);
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(8px);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.topbar h1 {
+  margin: 0.2rem 0 0;
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.1rem, 2.5vw, 1.6rem);
+}
+
+.eyebrow {
+  margin: 0;
+  letter-spacing: 0.18em;
+  font-size: 0.67rem;
+  text-transform: uppercase;
+  color: var(--ridge);
+}
+
+.back-link {
+  text-decoration: none;
+  background: var(--ink);
+  color: #fff;
+  padding: 0.6rem 1rem;
+  border-radius: 999px;
+  font-size: 0.84rem;
+}
+
+.quick-nav {
+  width: min(1200px, 94vw);
+  margin: 1rem auto 0;
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.quick-link {
+  text-decoration: none;
+  border: 1px solid rgba(30, 42, 35, 0.18);
+  color: var(--ink);
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 999px;
+  padding: 0.42rem 0.75rem;
+  font-size: 0.8rem;
+}
+
+.quick-link:hover {
+  background: rgba(70, 97, 61, 0.12);
+}
+
+.layout {
+  width: min(1200px, 94vw);
+  margin: 1.5rem auto 2rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.panel {
+  background: var(--paper);
+  border: 1px solid rgba(30, 42, 35, 0.12);
+  border-radius: 14px;
+  padding: 1rem;
+  box-shadow: 0 8px 18px rgba(30, 42, 35, 0.06);
+}
+
+.panel h2,
+.panel h3 {
+  margin-top: 0;
+}
+
+.auth-row {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.auth-row input,
+.controls-row select,
+.controls-row input {
+  flex: 1;
+  min-width: 220px;
+  border: 1px solid rgba(30, 42, 35, 0.2);
+  border-radius: 10px;
+  padding: 0.62rem 0.75rem;
+  font-size: 0.95rem;
+}
+
+button {
+  border: 0;
+  background: var(--leaf);
+  color: #fff;
+  border-radius: 10px;
+  padding: 0.62rem 0.9rem;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+button:hover {
+  filter: brightness(1.06);
+}
+
+button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.status-text {
+  margin: 0.7rem 0 0;
+  font-size: 0.88rem;
+  color: var(--ridge);
+}
+
+.muted {
+  color: rgba(30, 42, 35, 0.72);
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0.8rem;
+}
+
+.stat-card h3 {
+  margin-bottom: 0.3rem;
+  color: rgba(30, 42, 35, 0.75);
+  font-size: 0.84rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.stat-card p {
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.controls-row {
+  display: flex;
+  align-items: end;
+  justify-content: flex-start;
+  gap: 1rem;
+  margin-bottom: 0.7rem;
+  flex-wrap: wrap;
+}
+
+.controls-row label {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+}
+
+.table-wrap {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 860px;
+}
+
+tbody tr:nth-child(even) {
+  background: rgba(243, 246, 241, 0.58);
+}
+
+tbody tr:hover {
+  background: rgba(141, 98, 63, 0.06);
+}
+
+th,
+td {
+  padding: 0.65rem 0.55rem;
+  border-bottom: 1px solid rgba(30, 42, 35, 0.1);
+  text-align: left;
+  vertical-align: top;
+  font-size: 0.88rem;
+}
+
+th {
+  background: var(--mist);
+  font-size: 0.76rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.status-pill {
+  display: inline-block;
+  padding: 0.2rem 0.45rem;
+  border-radius: 999px;
+  background: rgba(70, 97, 61, 0.14);
+  font-size: 0.75rem;
+  text-transform: capitalize;
+}
+
+.status-pill--new {
+  background: rgba(141, 98, 63, 0.14);
+  color: var(--ridge);
+}
+
+.status-pill--contacted {
+  background: rgba(70, 97, 61, 0.14);
+  color: var(--leaf);
+}
+
+.status-pill--confirmed {
+  background: rgba(29, 97, 138, 0.14);
+  color: #1d618a;
+}
+
+.status-pill--closed {
+  background: rgba(30, 42, 35, 0.12);
+  color: var(--ink);
+}
+
+.booking-row--new td:first-child {
+  border-left: 3px solid rgba(141, 98, 63, 0.55);
+}
+
+.booking-row--contacted td:first-child {
+  border-left: 3px solid rgba(70, 97, 61, 0.55);
+}
+
+.booking-row--confirmed td:first-child {
+  border-left: 3px solid rgba(29, 97, 138, 0.55);
+}
+
+.booking-row--closed td:first-child {
+  border-left: 3px solid rgba(30, 42, 35, 0.45);
+}
+
+.action-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.action-group select {
+  min-width: 120px;
+  font-size: 0.8rem;
+  border: 1px solid rgba(30, 42, 35, 0.2);
+  border-radius: 8px;
+  padding: 0.35rem 0.45rem;
+}
+
+.delete-btn {
+  background: var(--danger);
+}
+
+.booking-cell {
+  min-width: 180px;
+  font-size: 0.8rem;
+  line-height: 1.45;
+}
+
+.payment-cell {
+  min-width: 210px;
+}
+
+.payment-editor {
+  display: grid;
+  gap: 0.35rem;
+  grid-template-columns: 1fr 1fr;
+}
+
+.guest-meta {
+  font-size: 0.8rem;
+  color: rgba(30, 42, 35, 0.72);
+}
+
+.booking-summary {
+  font-size: 0.82rem;
+  line-height: 1.45;
+}
+
+.booking-summary strong {
+  font-weight: 700;
+}
+
+.more-details {
+  margin-top: 0.4rem;
+}
+
+.more-details summary {
+  cursor: pointer;
+  font-size: 0.78rem;
+  color: var(--leaf);
+}
+
+.details-grid {
+  margin-top: 0.45rem;
+  display: grid;
+  gap: 0.45rem;
+}
+
+.detail-group {
+  margin: 0.35rem 0 0.1rem;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ridge);
+  font-weight: 700;
+}
+
+.field-label {
+  display: grid;
+  gap: 0.2rem;
+  font-size: 0.74rem;
+  color: rgba(30, 42, 35, 0.82);
+  font-weight: 600;
+}
+
+.payment-editor input,
+.payment-editor select,
+.payment-editor textarea {
+  border: 1px solid rgba(30, 42, 35, 0.2);
+  border-radius: 8px;
+  padding: 0.35rem 0.45rem;
+  font-size: 0.78rem;
+  width: 100%;
+}
+
+.payment-editor textarea {
+  resize: vertical;
+  min-height: 48px;
+}
+
+.payment-editor .detail-group,
+.payment-editor .small-btn,
+.payment-editor .field-label.full-width {
+  grid-column: 1 / -1;
+}
+
+.small-btn {
+  font-size: 0.72rem;
+  padding: 0.35rem 0.5rem;
+  border-radius: 8px;
+}
+
+.booking-panel .form-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.7rem;
+  margin-bottom: 0.7rem;
+}
+
+  .controls-panel .controls-row {
+    align-items: stretch;
+  }
+
+.booking-panel label {
+  display: grid;
+  gap: 0.35rem;
+  font-size: 0.82rem;
+}
+
+.booking-panel input,
+.booking-panel select,
+.booking-panel textarea {
+  border: 1px solid rgba(30, 42, 35, 0.2);
+  border-radius: 10px;
+  padding: 0.62rem 0.75rem;
+  font-size: 0.9rem;
+  font-family: inherit;
+}
+
+.booking-actions {
+  display: flex;
+  gap: 0.7rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.availability-controls {
+  display: flex;
+  gap: 0.8rem;
+  align-items: end;
+  flex-wrap: wrap;
+}
+
+.availability-controls label {
+  display: grid;
+  gap: 0.35rem;
+  font-size: 0.82rem;
+}
+
+.availability-controls input {
+  border: 1px solid rgba(30, 42, 35, 0.2);
+  border-radius: 10px;
+  padding: 0.58rem 0.72rem;
+  font-size: 0.9rem;
+}
+
+.calendar-grid-wrap {
+  margin-top: 0.8rem;
+  overflow-x: auto;
+}
+
+.calendar {
+  border-collapse: collapse;
+  width: min(900px, 100%);
+}
+
+.calendar th,
+.calendar td {
+  border: 1px solid rgba(30, 42, 35, 0.12);
+  width: 14.28%;
+  min-height: 82px;
+  vertical-align: top;
+  text-align: left;
+  padding: 0.4rem;
+}
+
+.calendar th {
+  background: var(--mist);
+  font-size: 0.74rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.calendar-day-num {
+  font-weight: 700;
+  font-size: 0.8rem;
+}
+
+.calendar td.is-empty {
+  background: rgba(30, 42, 35, 0.04);
+}
+
+.calendar td.is-booked {
+  background: rgba(169, 55, 52, 0.15);
+}
+
+.calendar td.is-free {
+  background: rgba(70, 97, 61, 0.09);
+}
+
+.calendar-chip {
+  margin-top: 0.25rem;
+  display: inline-block;
+  padding: 0.15rem 0.35rem;
+  border-radius: 999px;
+  font-size: 0.65rem;
+  background: rgba(30, 42, 35, 0.1);
+}
+
+.calendar-conflicts {
+  margin-top: 0.8rem;
+  font-size: 0.85rem;
+}
+
+@media (max-width: 980px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .booking-panel .form-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .payment-editor {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .topbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .booking-panel .form-grid {
+    grid-template-columns: 1fr;
+  }
+}
